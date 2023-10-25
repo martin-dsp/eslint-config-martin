@@ -1,0 +1,19 @@
+name: "on-push-check-and-publish-package"
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  check-and-publish-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checekout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+#      - run: npm test
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+#          registry: "https://npm.pkg.github.com"
