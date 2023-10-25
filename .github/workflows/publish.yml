@@ -16,8 +16,8 @@ jobs:
       # 깃헙 액션 봇으로 npm version 올린 후 커밋
       - name: Commit files
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          git config --local user.email "kcs19542001@hotmail.com"
+          git config --local user.name "martin-dsp"
           npm version minor
       # 올라간 버전을 원격 저장소에 커밋
       - name: Push changes
