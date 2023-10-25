@@ -1,6 +1,6 @@
 {
-  "name": "@martin-dsp/eslint-config-martin",
-  "version": "1.0.0",
+  "name": "@martin-dsp/eslint-config",
+  "version": "0.0.1",
   "description": "개인 eslint 입니다",
   "main": "index.js",
   "scripts": {},
