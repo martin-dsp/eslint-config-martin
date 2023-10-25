@@ -11,4 +11,4 @@ jobs:
       - name: Check package version
         uses: technote-space/package-version-check-action@v1
         with:
-          BRANCH_PREFIX: release/
+          BRANCH_PREFIX: main/
