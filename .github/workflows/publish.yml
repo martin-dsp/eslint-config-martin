@@ -21,7 +21,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           npm version minor
           git pull --rebase
-          git push -u ${{ github.head_ref }}
+          git push ${{ github.head_ref }}
 #          git commit -am "Update npm version"
 #      # 올라간 버전을 원격 저장소에 커밋
 #      - name: Push changes
