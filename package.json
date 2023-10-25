@@ -4,7 +4,8 @@
   "description": "개인 eslint 입니다",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
   },
   "author": "martin kim",
   "license": "ISC",
