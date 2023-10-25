@@ -21,7 +21,8 @@ jobs:
           git config --local user.name "github-actions[bot]"
           npm version minor
           git pull --rebase
-          git push -u ${{ github.head_ref }}
+          git push -u https://github.com/martin-dsp/eslint-config-martin.git
+#          git push -u ${{ github.head_ref }}
 #          git commit -am "Update npm version"
 #      # 올라간 버전을 원격 저장소에 커밋
 #      - name: Push changes
