@@ -1,11 +1,12 @@
-name: "on-push-check-and-publish-package"
+name: Publish
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["Bump Version"]
+    types: [completed]
 
 jobs:
-  check-and-publish-package:
+  publish:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
