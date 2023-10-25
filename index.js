@@ -1,3 +1,3 @@
 import backend from "./backend";
 
-export { backend };
+export { backend }
