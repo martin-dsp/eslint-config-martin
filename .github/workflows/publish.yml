@@ -17,12 +17,11 @@ jobs:
       # 깃헙 액션 봇으로 npm version 올린 후 커밋
       - name: Commit files
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
           npm version minor
           git pull --rebase
-          git push -u https://github.com/martin-dsp/eslint-config-martin.git
-#          git push -u ${{ github.head_ref }}
+          git push -u ${{ github.head_ref }}
 #          git commit -am "Update npm version"
 #      # 올라간 버전을 원격 저장소에 커밋
 #      - name: Push changes
