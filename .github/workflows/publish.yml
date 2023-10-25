@@ -7,7 +7,7 @@ on:
 
 jobs:
   update-publish:
-    if: github.ref == 'refs/heads/main' && github.event.before == '0000000000000000000000000000000000000000'
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
