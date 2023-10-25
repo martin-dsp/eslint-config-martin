@@ -19,8 +19,10 @@ jobs:
 
       - name: Install Package dependencies
         run: yarn install
-      - name: Build
-        run: yarn build
+
+#      - name: Build
+#        run: yarn build
+
       - name: Publish
         run: |
           npm config set //registry.npmjs.org/:_authToken=NPM_TOKEN
