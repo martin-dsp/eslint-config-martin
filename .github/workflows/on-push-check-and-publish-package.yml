@@ -12,8 +12,13 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@martin-dsp'
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 #      - run: npm test
-      - uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          registry: "https://npm.pkg.github.com"
+#      - uses: JS-DevTools/npm-publish@v1
+#        with:
+#          token: ${{ secrets.NPM_TOKEN }}
+#          registry: "https://npm.pkg.github.com"
