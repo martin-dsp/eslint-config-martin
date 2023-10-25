@@ -11,4 +11,5 @@ jobs:
       - name: Check package version
         uses: technote-space/package-version-check-action@v1
         with:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH_PREFIX: main/
