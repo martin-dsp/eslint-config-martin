@@ -1,0 +1,22 @@
+{
+  "name": "eslint-config-martin",
+  "version": "1.0.0",
+  "description": "개인 eslint 입니다",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "author": "martin kim",
+  "license": "ISC",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "eslint": "^8.52.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "husky": "^8.0.3",
+    "prettier": "^3.0.3"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^9.0.0"
+  }
+}
