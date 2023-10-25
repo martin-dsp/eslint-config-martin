@@ -8,13 +8,20 @@ jobs:
   check-and-publish-package:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 16.x
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@martin-dsp'
-      - run: npm publish
+#          registry-url: 'https://npm.pkg.github.com'
+#          scope: '@martin-dsp'
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Publish Package
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 #      - run: npm test
