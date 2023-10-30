@@ -12,12 +12,12 @@ module.exports = {
   ],
   root: true,
   env: {
-    es2021: true,
+    // es2021: true,
     node: true,
-    browser: true,
+    // browser: true,
     jest: true,
   },
-  ignorePatterns: [".eslintrc.js"],
+  ignorePatterns: [".eslintrc.js", "/mildang-backend-*/", "/legacy_migration"],
   rules: {
     "@typescript-eslint/interface-name-prefix": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
